@@ -9,36 +9,76 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <h1 id="firstlogo" >Fuel<span>Up</span></h1>
-
-        <nav>
-            <div class="navbar">
-                <a href="#">home</a>
-                <a href="#">login</a>
-                <a href="#">plans</a>
-                <a href="contactpage.html">contact</a>
-            </div>
+    <header>
+        <h2>fuel up</h2>
+        <nav class="navigation">
+            <a href="#">home</a>
+            <a href="#">plans</a>
+            <a href="contactpage.html">contact</a>
+            <button class="btnlogin-popup">login</button>
         </nav>
+    </header>
 
-    <!-- Login form start -->
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
 
-    <div class="login-form">
-    <form action="">
-    
-        <div id="closeloginform" class="fas fa-times"></div>
-        <div class="login-main">
-
-            <div class="form-content">
-                <h1 class="loginhead"> <i class="fas fa-user"></i> User Login</h1>
-                <input type="form">
-                <input type="password" name="" id="pass">
-            </div>
+        <div class="form-box login" id="login">
+            <h2>login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">remember me</label>
+                </div>
+                <button type="submit" class="btn">login</button>
+                <div class="login-register">
+                    <p>new user?? <a href="#" id="lnksignup" class="register-link">signup</a></p>
+                </div>
+            </form>
         </div>
-    </form>
+
+        <div class="form-box signup hide"  id="signup">
+            <h2>signup</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="person"></ion-icon>
+                    </span>
+                    <input type="text" required>
+                    <label>username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> I agree to the terms and conditions</label>
+                </div>
+                <button type="submit" class="btn">signup</button>
+                <div class="login-register">
+                    <p>already a user? <a href="#" id="lnklogin" class="login-link">login</a></p>
+                </div>
+            </form>
+        </div>
     </div>
 
-</div>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 <div class="home">
     <div class="main-home">
@@ -62,7 +102,7 @@
                 <p class="desc1">We at FuelUp are dedicated towards helping you achieve your fitness goals!</p>
                 <p class="desc">Join us to start your fitness journey </p>
                 <div class="body-btn-welcome">
-                    <a href="">Assessment</a>
+                    <a href="plans.html">Assessment</a>
                 </div>
                 </div>
                 
@@ -86,35 +126,28 @@
         <div class="fitness-main-service">
             <div class="fitness-inner-content">
                 <div class="fitness-images">
-                    <img src="images/welcome images2.png" alt="">
+                    <img src="images/khana1.png" alt="">
                 </div>
                 <div class="fitness-inner-headings">
                     <h1>Diet Plan</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, dolores?</p>
-                    <button class="fitness-btn">get in touch</button>
+                    <p>Tailored nutritional guidance to help users meet their fitness goals through healthy and personalized meal recommendations</p>
+                    <a href="diet.html">
+                    <button class="fitness-btn">Enter</button>
+                    </a>
                 </div>
                 
             </div>
 
             <div class="fitness-inner-content">
                 <div class="fitness-images">
-                    <img src="images/welcome images2.png" alt="">
+                    <img src="images/bandaworkout.jpg" alt="">
                 </div>
                 <div class="fitness-inner-headings">
                     <h1>Workout Plan</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur, facilis!</p>
-                    <button class="fitness-btn">get in touch</button>
-                </div>
-            </div>
-
-            <div class="fitness-inner-content">
-                <div class="fitness-images">
-                    <img src="images/welcom images3.png" alt="">
-                </div>
-                <div class="fitness-inner-headings">
-                    <h1>Prime Plan</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, optio?</p>
-                <button class="fitness-btn">get in touch</button>
+                    <p>Customized exercise routines designed to suit individual needs, enhancing fitness and well-being</p>
+                    <a href="workout.html">
+                    <button class="fitness-btn">Enter</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -123,8 +156,7 @@
     <div class="trained">
         <div class="trained-content">
             <h1>About us</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis molestiae maiores temporibus nemo numquam corrupti, saepe ratione alias laboriosam magnam dignissimos quae itaque perferendis, unde tempora deleniti, harum libero vitae accusantium voluptates veniam consectetur mollitia? Debitis quasi, commodi praesentium distinctio neque maiores. Enim ullam odit voluptates doloribus cupiditate, ducimus laborum commodi ea reprehenderit amet temporibus quo repellendus eum libero quae, esse, perspiciatis accusamus rerum magni architecto! Minima, similique ipsam delectus unde provident numquam dicta incidunt alias dolor inventore perferendis modi culpa, sunt sit eveniet rerum cupiditate nihil neque voluptas totam! Fugiat accusantium error natus tempore totam voluptatem, aspernatur minima maiores debitis iure voluptate praesentium alias quibusdam, eos nihil explicabo dolorem labore consectetur autem accusamus sapiente! Rerum mollitia odio voluptatibus illo.</p>
-            <button><a href="">get in touch</a></button>
+            <p>Our fitness website offers a comprehensive platform for health enthusiasts. It provides personalized workout suggestions and a BMI calculator for users to track their fitness journey. Additionally, it generates progress reports, offering a tailored assessment of each individual's achievements, making it a one-stop destination for achieving fitness goals.</p>
         </div>
     </div>
     <script src="script.js"></script>

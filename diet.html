@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Lists</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #1E1E1E;
+            color: #fff;
+        }
+
+        .meal-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .meal-section {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* Ensure the blur doesn't spill outside the container */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+
+        .meal-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px); /* Apply a blur effect */
+            z-index: -1; /* Send the background image behind the content */
+            opacity: 0.6;
+        }
+
+        .meal-header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            position: relative; /* Ensure text is above the blurred image */
+            z-index: 1;
+        }
+
+        .food-list {
+            list-style-type: none;
+            padding: 0;
+            max-height: 400px;
+            z-index: 1;
+            overflow-y: auto; /* Ensure text is above the blurred image */
+        }
+
+        .food-item {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .calories {
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        /* Background images */
+        .veg-background::before {
+            background-image: url('https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/10/food-rainbow-vegetable-fruit-variety-group-healthy-1296x728-header.jpg?w=1155&h=1528'); /* Replace with your actual image */
+        }
+
+        .non-veg-background::before {
+            background-image: url('https://i.pinimg.com/1200x/20/92/48/2092483fde63dc2c9e3f2a0038c8af1f.jpg'); /* Replace with your actual image */
+        }
+    </style>
+</head>
+<body>
+    <div class="meal-container">
+        <!-- Vegetarian Section -->
+        <div class="meal-section veg-background">
+            <div class="meal-header">Veg</div>
+
+            <!-- Breakfast List -->
+            <div>
+                <div>Breakfast</div>
+                <ul class="food-list">
+                    <li class="food-item">Oatmeal - <span class="calories">150 cals</span></li>
+                    <li class="food-item">Fruit Salad - <span class="calories">100 cals</span></li>
+                    <li class="food-item">Avocado Toast - <span class="calories">200 cals</span></li>
+                    <li class="food-item">Greek Yogurt with Berries - <span class="calories">180 cals</span></li>
+                    <li class="food-item">Whole Grain Pancakes - <span class="calories">220 cals</span></li>
+                    <!-- Add more breakfast items as needed -->
+                </ul>
+            </div>
+
+            <!-- Lunch List -->
+            <div>
+                <div>Lunch</div>
+                <ul class="food-list">
+                    <li class="food-item">Quinoa Salad - <span class="calories">250 cals</span></li>
+                    <li class="food-item">Grilled Vegetables - <span class="calories">180 cals</span></li>
+                    <li class="food-item">Caprese Salad - <span class="calories">220 cals</span></li>
+                    <li class="food-item">Vegetarian Wrap - <span class="calories">300 cals</span></li>
+                    <li class="food-item">Spinach and Feta Stuffed Portobello Mushrooms - <span class="calories">240 cals</span></li>
+                    <li class="food-item">Sweet Potato and Black Bean Burrito Bowl - <span class="calories">320 cals</span></li>
+                    <li class="food-item">Vegetarian Sushi Roll - <span class="calories">280 cals</span></li>
+                    <!-- Add more lunch items as needed -->
+                </ul>
+            </div>
+
+            <!-- Dinner List -->
+            <div>
+                <div>Dinner</div>
+                <ul class="food-list">
+                    <li class="food-item">Stuffed Bell Peppers - <span class="calories">220 cals</span></li>
+                    <li class="food-item">Vegetarian Stir-Fry - <span class="calories">180 cals</span></li>
+                    <li class="food-item">Eggplant Parmesan - <span class="calories">260 cals</span></li>
+                    <li class="food-item">Veggie Burger - <span class="calories">320 cals</span></li>
+                    <li class="food-item">Spaghetti Aglio e Olio - <span class="calories">280 cals</span></li>
+                    <li class="food-item">Chickpea and Spinach Curry - <span class="calories">300 cals</span></li>
+                    <li class="food-item">Cauliflower Crust Pizza - <span class="calories">250 cals</span></li>
+                    <!-- Add more dinner items as needed -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Non-Vegetarian Section -->
+        <div class="meal-section non-veg-background">
+            <div class="meal-header">Non-Veg</div>
+
+            <!-- Breakfast List -->
+            <div>
+                <div>Breakfast</div>
+                <ul class="food-list">
+                    <li class="food-item">Scrambled Eggs with Bacon - <span class="calories">300 cals</span></li>
+                    <li class="food-item">Sausage and Cheese Sandwich - <span class="calories">400 cals</span></li>
+                    <li class="food-item">Smoked Salmon Bagel - <span class="calories">320 cals</span></li>
+                    <li class="food-item">Chicken and Waffles - <span class="calories">450 cals</span></li>
+                    <li class="food-item">Bacon and Spinach Quiche - <span class="calories">380 cals</span></li>
+                    <!-- Add more breakfast items as needed -->
+                </ul>
+            </div>
+
+            <!-- Lunch List -->
+            <div>
+                <div>Lunch</div>
+                <ul class="food-list">
+                    <li class="food-item">Chicken Caesar Salad - <span class="calories">350 cals</span></li>
+                    <li class="food-item">Beef Burrito - <span class="calories">450 cals</span></li>
+                    <li class="food-item">Shrimp Scampi - <span class="calories">380 cals</span></li>
+                    <li class="food-item">Turkey Club Sandwich - <span class="calories">420 cals</span></li>
+                    <li class="food-item">Beef and Broccoli Stir-Fry - <span class="calories">400 cals</span></li>
+                    <li class="food-item">Lemon Garlic Butter Shrimp Pasta - <span class="calories">350 cals</span></li>
+                    <li class="food-item">Grilled Chicken Quesadilla - <span class="calories">370 cals</span></li>
+                    <!-- Add more lunch items as needed -->
+                </ul>
+            </div>
+
+            <!-- Dinner List -->
+            <div>
+                <div>Dinner</div>
+                <ul class="food-list">
+                    <li class="food-item">Grilled Steak - <span class="calories">500 cals</span></li>
+                    <li class="food-item">BBQ Chicken Drumsticks - <span class="calories">450 cals</span></li>
+                    <li class="food-item">Baked Ziti with Sausage - <span class="calories">480 cals</span></li>
+                    <li class="food-item">Lamb Chops with Rosemary - <span class="calories">550 cals</span></li>
+                    <li class="food-item">Honey Mustard Glazed Salmon - <span class="calories">470 cals</span></li>
+                    <li class="food-item">Pork Tenderloin with Apples - <span class="calories">490 cals</span></li>
+                    <li class="food-item">Cajun Shrimp and Grits - <span class="calories">420 cals</span></li>
+                    <!-- Add more dinner items as needed -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
