@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+ 
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+
+        <div class="wrapper">
+            <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+    
+            <div class="form-box login" id="login">
+                <h2>login</h2>
+                <form action="database.php" method="post">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" name="loginUsername" required>
+                        <label>username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" name="loginPassword"  required>
+                        <label>password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">remember me</label>
+                    </div>
+                    <button type="submit" name="login" class="btn">login</button>
+                    <div class="login-register">
+                        <p>new user?? <a href="#" id="lnksignup" class="register-link">signup</a></p>
+                    </div>
+                </form>
+            </div>
+    
+            <div class="form-box signup hide"  id="signup">
+                <h2>signup</h2>
+                <form action="database.php" method="post">
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="person"></ion-icon>
+                        </span>
+                        <input type="text" name="username" required>
+                        <label>username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="email"></ion-icon></span>
+                        <input type="email" name="Email" required>
+                        <label>email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" name="password" required>
+                        <label>password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox"> I agree to the terms and conditions</label>
+                    </div>
+                    <button type="submit" name="signup" class="btn">signup</button>
+                    <div class="login-register">
+                        <p>already a user? <a href="#" id="lnklogin" class="login-link">login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
