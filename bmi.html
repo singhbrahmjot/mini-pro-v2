@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #1E1E1E;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .bmi-container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+
+        .input-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border-radius: 8px;
+        }
+
+        .calculate-btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .result-box {
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+        }
+
+        .countdown-timer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bmi-container">
+        <h2>BMI Calculator</h2>
+        <label class="input-label" for="height">Height (in cm):</label>
+        <input type="number" id="height" class="input-field" placeholder="Enter height" required>
+
+        <label class="input-label" for="weight">Weight (in kg):</label>
+        <input type="number" id="weight" class="input-field" placeholder="Enter weight" required>
+
+        <label class="input-label" for="gender">Gender:</label>
+        <select id="gender" class="input-field" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <button class="calculate-btn" onclick="calculateBMI()">Calculate</button>
+
+        <div id="result" class="result-box"></div>
+
+        <div id="countdown" class="countdown-timer"></div>
+
+        <script>
+            function calculateBMI() {
+                const height = document.getElementById('height').value;
+                const weight = document.getElementById('weight').value;
+                const gender = document.getElementById('gender').value;
+
+                const bmi = weight / ((height / 100) ** 2);
+                let category = '';
+                if (bmi < 18.5) {
+                    category = 'Underweight';
+                } else if (bmi >= 18.5 && bmi < 25) {
+                    category = 'Normal weight';
+                } else {
+                    category = 'Overweight';
+                }
+
+                const calorieNeeds = calculateCalorieNeeds(bmi, gender);
+
+                const resultBox = document.getElementById('result');
+                resultBox.innerHTML = `
+                    <p>Your BMI: ${bmi.toFixed(2)}</p>
+                    <p>Category: ${category}</p>
+                    <p>Calories for Breakfast: ${calorieNeeds.breakfast} kcal</p>
+                    <p>Calories for Lunch: ${calorieNeeds.lunch} kcal</p>
+                    <p>Calories for Dinner: ${calorieNeeds.dinner} kcal</p>
+                `;
+
+                startCountdown();
+            }
+
+            function calculateCalorieNeeds(bmi, gender) {
+                const baseCalories = gender === 'male' ? 2500 : 2000;
+                const calorieMultiplier = bmi < 18.5 ? 1.2 : bmi >= 18.5 && bmi < 25 ? 1.5 : 1.2;
+
+                const breakfastCalories = baseCalories * 0.25 * calorieMultiplier;
+                const lunchCalories = baseCalories * 0.35 * calorieMultiplier;
+                const dinnerCalories = baseCalories * 0.4 * calorieMultiplier;
+
+                return {
+                    breakfast: breakfastCalories.toFixed(2),
+                    lunch: lunchCalories.toFixed(2),
+                    dinner: dinnerCalories.toFixed(2),
+                };
+            }
+
+            function startCountdown() {
+                let secondsRemaining = 30;
+                const countdownElement = document.getElementById('countdown');
+
+                function updateCountdown() {
+                    countdownElement.textContent = `Going home in ${secondsRemaining} seconds`;
+                    secondsRemaining--;
+
+                    if (secondsRemaining < 0) {
+                        clearInterval(countdownInterval);
+                        redirectToIndex();
+                    }
+                }
+
+                const countdownInterval = setInterval(updateCountdown, 1000);
+            }
+
+            function redirectToIndex() {
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 0);
+            }
+        </script>
+    </div>
+</body>
+</html>
