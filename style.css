@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
 
-:root{
-    --first-color:#fa7c30;
-    --footer-color:#161418;
-    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+:root {
+    --first-color: #fa7c30;
+    --footer-color: #161418;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -14,13 +14,14 @@
     text-transform: capitalize;
     transition: 0.2s;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif
+    font-family: 'Montserrat', sans-serif;
 }
-body{
+
+body {
     width: 100%;
 }
 
-.header{
+.header {
     padding: 1rem 7%;
     position: fixed;
     left: 0;
@@ -28,11 +29,13 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(0,0,0,.6);
+    background: rgba(0, 0, 0, .6);
     z-index: 100;
     width: 100%;
-   
 }
+
+
+
 .header h1{
     color: white;
     font-size: 50px;
@@ -414,21 +417,11 @@ body{
     .icons div{
         display: initial;
     }
-    .navbar{
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 25rem;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: rgba(0,0,0,.8);
-    }
-    .navbar.active{
+ 
+    .navigation.active{
         left: 0;
     }
-    .navbar a{
+    .navigation a{
         padding: 1rem;
         margin-top: 10px;
         font-size: 18px;
