@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background-color: #1E1E1E;
+            background-color: #202020;
             color: #fff;
         }
 
@@ -61,6 +61,13 @@
             z-index: 1;
         }
 
+        .title{
+            /* text-decoration: underline; */
+            font-size: 30px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
         .exercise-list {
             list-style-type: none;
             padding: 0;
@@ -82,15 +89,15 @@
 
         /* Background images */
         .beginner-background::before {
-            background: linear-gradient(to bottom, #52ea33, #6c9bc2);
+            background: linear-gradient(to bottom, #3392ea, #000000);
         }
 
         .intermediate-background::before {
-            background: linear-gradient(to bottom, #2f7521, #6ca3c2);
+            background: linear-gradient(to bottom, #4dc236, #000000);
         }
 
         .advanced-background::before {
-            background: linear-gradient(to bottom, #db1301, #6ca3c2);
+            background: linear-gradient(to bottom, #be1000, #000000);
         }
 
         a {
@@ -122,7 +129,7 @@
     <div class="workout-container">
         <!-- Beginner Section -->
         <div class="workout-section beginner-background">
-            <div class="workout-header">Beginner</div>
+            <div class="workout-header"><div class="title">~Beginner~</div></div>
 
             <!-- Exercise List -->
             <div>
@@ -178,7 +185,7 @@
 
         <!-- Intermediate Section -->
         <div class="workout-section intermediate-background">
-            <div class="workout-header">Intermediate</div>
+            <div class="workout-header"><div class="title">~Intermediate~</div></div>
 
             <!-- Exercise List -->
             <div>
@@ -234,7 +241,7 @@
 
         <!-- Advanced Section -->
         <div class="workout-section advanced-background">
-            <div class="workout-header">Advanced</div>
+            <div class="workout-header"><div class="title">~Advanced~</div></div>
 
             <!-- Exercise List -->
             <div>

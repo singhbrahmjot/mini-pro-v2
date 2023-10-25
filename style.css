@@ -30,6 +30,8 @@ body {
     justify-content: space-between;
     align-items: center;
     background: rgba(0, 0, 0, .6);
+    background-size: cover;
+    background-position: center;
     z-index: 100;
     width: 100%;
 }
@@ -43,26 +45,27 @@ body {
 .header h1 span{
     color: var(--first-color);
 }
-.navbar a{
+.navigation a{
     color: white;
     padding: 0.5rem;
-    
+    margin-left: 40px;
     position: relative;
 }
-.navbar a:hover{
+.navigation a:hover{
     color: var(--first-color);
 }
-.navbar a::after{
+.navigation a::after{
     content: "";
     background-color: var(--first-color);
     width: 0;
     height: 2px;
     position: absolute;
     top: 100%;
+    bottom: -6px;
     left: 0;
     transition: .5s;
 }
-.navbar a:hover::after{
+.navigation a:hover::after{
     width: 100%;
     
 }
