@@ -7,7 +7,12 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-weight: 500;
             margin: 0;
+            align-items: center;
+            width: 100%;
             padding: 0;
             overflow: hidden;
             background-color: #1E1E1E;
@@ -17,7 +22,7 @@
         .meal-container {
             display: flex;
             justify-content: space-around;
-            padding: 20px;
+            padding: 10px;
         }
 
         .meal-section {
@@ -46,7 +51,7 @@
         }
 
         .meal-header {
-            font-size: 24px;
+            font-size: 40px;
             font-weight: bold;
             margin-bottom: 10px;
             position: relative; /* Ensure text is above the blurred image */
@@ -73,11 +78,11 @@
 
         /* Background images */
         .veg-background::before {
-            background-image: url('https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/10/food-rainbow-vegetable-fruit-variety-group-healthy-1296x728-header.jpg?w=1155&h=1528'); /* Replace with your actual image */
+            background: linear-gradient(to right, #e0b336, rgb(87, 154, 42));
         }
 
         .non-veg-background::before {
-            background-image: url('https://i.pinimg.com/1200x/20/92/48/2092483fde63dc2c9e3f2a0038c8af1f.jpg'); /* Replace with your actual image */
+            background: linear-gradient(to right, #f94700, #cd0000);
         }
     </style>
 </head>
@@ -91,11 +96,11 @@
             <div>
                 <div>Breakfast</div>
                 <ul class="food-list">
-                    <li class="food-item">Oatmeal - <span class="calories">150 cals</span></li>
-                    <li class="food-item">Fruit Salad - <span class="calories">100 cals</span></li>
-                    <li class="food-item">Avocado Toast - <span class="calories">200 cals</span></li>
-                    <li class="food-item">Greek Yogurt with Berries - <span class="calories">180 cals</span></li>
-                    <li class="food-item">Whole Grain Pancakes - <span class="calories">220 cals</span></li>
+                    <li class="food-item">Poha - <span class="calories">150 cals</span></li>
+                    <li class="food-item">Upma - <span class="calories">100 cals</span></li>
+                    <li class="food-item">Masala Dosa - <span class="calories">200 cals</span></li>
+                    <li class="food-item">Idli with Coconut Chutney - <span class="calories">180 cals</span></li>
+                    <li class="food-item">Paratha with Curd - <span class="calories">220 cals</span></li>
                     <!-- Add more breakfast items as needed -->
                 </ul>
             </div>
@@ -104,13 +109,13 @@
             <div>
                 <div>Lunch</div>
                 <ul class="food-list">
-                    <li class="food-item">Quinoa Salad - <span class="calories">250 cals</span></li>
-                    <li class="food-item">Grilled Vegetables - <span class="calories">180 cals</span></li>
-                    <li class="food-item">Caprese Salad - <span class="calories">220 cals</span></li>
-                    <li class="food-item">Vegetarian Wrap - <span class="calories">300 cals</span></li>
-                    <li class="food-item">Spinach and Feta Stuffed Portobello Mushrooms - <span class="calories">240 cals</span></li>
-                    <li class="food-item">Sweet Potato and Black Bean Burrito Bowl - <span class="calories">320 cals</span></li>
-                    <li class="food-item">Vegetarian Sushi Roll - <span class="calories">280 cals</span></li>
+                    <li class="food-item">Chana Masala with Rice - <span class="calories">250 cals</span></li>
+                    <li class="food-item">Baingan Bharta with Roti - <span class="calories">180 cals</span></li>
+                    <li class="food-item">Palak Paneer with Naan - <span class="calories">220 cals</span></li>
+                    <li class="food-item">Vegetable Biryani - <span class="calories">300 cals</span></li>
+                    <li class="food-item">Aloo Gobi with Chapati - <span class="calories">240 cals</span></li>
+                    <li class="food-item">Rajma Chawal - <span class="calories">320 cals</span></li>
+                    <li class="food-item">Vegetable Pulao - <span class="calories">280 cals</span></li>
                     <!-- Add more lunch items as needed -->
                 </ul>
             </div>
@@ -119,13 +124,13 @@
             <div>
                 <div>Dinner</div>
                 <ul class="food-list">
-                    <li class="food-item">Stuffed Bell Peppers - <span class="calories">220 cals</span></li>
-                    <li class="food-item">Vegetarian Stir-Fry - <span class="calories">180 cals</span></li>
-                    <li class="food-item">Eggplant Parmesan - <span class="calories">260 cals</span></li>
-                    <li class="food-item">Veggie Burger - <span class="calories">320 cals</span></li>
-                    <li class="food-item">Spaghetti Aglio e Olio - <span class="calories">280 cals</span></li>
-                    <li class="food-item">Chickpea and Spinach Curry - <span class="calories">300 cals</span></li>
-                    <li class="food-item">Cauliflower Crust Pizza - <span class="calories">250 cals</span></li>
+                    <li class="food-item">Paneer Tikka - <span class="calories">220 cals</span></li>
+                    <li class="food-item">Vegetable Biryani - <span class="calories">180 cals</span></li>
+                    <li class="food-item">Aloo Paratha - <span class="calories">260 cals</span></li>
+                    <li class="food-item">Chole Bhature - <span class="calories">320 cals</span></li>
+                    <li class="food-item">Palak Paneer with Naan - <span class="calories">220 cals</span></li>
+                    <li class="food-item">Dal Makhani with Rice - <span class="calories">300 cals</span></li>
+                    <li class="food-item">Gobi Manchurian - <span class="calories">250 cals</span></li>
                     <!-- Add more dinner items as needed -->
                 </ul>
             </div>
@@ -139,11 +144,11 @@
             <div>
                 <div>Breakfast</div>
                 <ul class="food-list">
-                    <li class="food-item">Scrambled Eggs with Bacon - <span class="calories">300 cals</span></li>
-                    <li class="food-item">Sausage and Cheese Sandwich - <span class="calories">400 cals</span></li>
-                    <li class="food-item">Smoked Salmon Bagel - <span class="calories">320 cals</span></li>
-                    <li class="food-item">Chicken and Waffles - <span class="calories">450 cals</span></li>
-                    <li class="food-item">Bacon and Spinach Quiche - <span class="calories">380 cals</span></li>
+                    <li class="food-item">Masala Omelette - <span class="calories">300 cals</span></li>
+                    <li class="food-item">Chicken Sandwich - <span class="calories">400 cals</span></li>
+                    <li class="food-item">Smoked Chicken Paratha Roll - <span class="calories">320 cals</span></li>
+                    <li class="food-item">Chicken and Egg Wrap - <span class="calories">450 cals</span></li>
+                    <li class="food-item">Chicken Quiche - <span class="calories">380 cals</span></li>
                     <!-- Add more breakfast items as needed -->
                 </ul>
             </div>
@@ -152,13 +157,13 @@
             <div>
                 <div>Lunch</div>
                 <ul class="food-list">
-                    <li class="food-item">Chicken Caesar Salad - <span class="calories">350 cals</span></li>
-                    <li class="food-item">Beef Burrito - <span class="calories">450 cals</span></li>
-                    <li class="food-item">Shrimp Scampi - <span class="calories">380 cals</span></li>
-                    <li class="food-item">Turkey Club Sandwich - <span class="calories">420 cals</span></li>
-                    <li class="food-item">Beef and Broccoli Stir-Fry - <span class="calories">400 cals</span></li>
-                    <li class="food-item">Lemon Garlic Butter Shrimp Pasta - <span class="calories">350 cals</span></li>
+                    <li class="food-item">Chicken Biryani - <span class="calories">350 cals</span></li>
+                    <li class="food-item">Shrimp Curry - <span class="calories">380 cals</span></li>
+                    <li class="food-item">Chicken Club Sandwich - <span class="calories">420 cals</span></li>
+                    <li class="food-item">Chicken and Broccoli Stir-Fry - <span class="calories">400 cals</span></li>
+                    <li class="food-item">Spicy Garlic Butter Shrimp Pasta - <span class="calories">350 cals</span></li>
                     <li class="food-item">Grilled Chicken Quesadilla - <span class="calories">370 cals</span></li>
+                    <li class="food-item">Tandoori Chicken with Chapati - <span class="calories">400 cals</span></li>
                     <!-- Add more lunch items as needed -->
                 </ul>
             </div>
@@ -167,13 +172,13 @@
             <div>
                 <div>Dinner</div>
                 <ul class="food-list">
-                    <li class="food-item">Grilled Steak - <span class="calories">500 cals</span></li>
-                    <li class="food-item">BBQ Chicken Drumsticks - <span class="calories">450 cals</span></li>
-                    <li class="food-item">Baked Ziti with Sausage - <span class="calories">480 cals</span></li>
-                    <li class="food-item">Lamb Chops with Rosemary - <span class="calories">550 cals</span></li>
-                    <li class="food-item">Honey Mustard Glazed Salmon - <span class="calories">470 cals</span></li>
-                    <li class="food-item">Pork Tenderloin with Apples - <span class="calories">490 cals</span></li>
-                    <li class="food-item">Cajun Shrimp and Grits - <span class="calories">420 cals</span></li>
+                    <li class="food-item">Grilled Chicken - <span class="calories">500 cals</span></li>
+                    <li class="food-item">Chicken Curry - <span class="calories">450 cals</span></li>
+                    <li class="food-item">Vegetable Biryani - <span class="calories">480 cals</span></li>
+                    <li class="food-item">Fish Curry - <span class="calories">550 cals</span></li>
+                    <li class="food-item">Tandoori Fish - <span class="calories">300 cals</span></li>
+                    <li class="food-item">Chicken Curry with Apples - <span class="calories">370 cals</span></li>
+                    <li class="food-item">Shrimp Curry with Rice - <span class="calories">410 cals</span></li>
                     <!-- Add more dinner items as needed -->
                 </ul>
             </div>

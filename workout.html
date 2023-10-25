@@ -65,14 +65,14 @@
             list-style-type: none;
             padding: 0;
             z-index: 1; /* Ensure text is above the blurred image */
-            max-height: 400px; /* Set a maximum height for the list */
-            /*overflow-y: auto; /* Enable vertical scrollbar when content exceeds max height */
+            max-height: 720px; /* Set a maximum height for the list */
+            overflow: auto; /* Enable vertical scrollbar when content exceeds max height */
         }
 
         .exercise-item {
             font-size: 18px;
             margin-bottom: 15px; /* Add more space between exercises */
-            color: #fff; /* Set text color */
+            color: #ffffff; /* Set text color */
         }
 
         .exercise-description {
@@ -82,15 +82,39 @@
 
         /* Background images */
         .beginner-background::before {
-            background-image: url('https://media.self.com/photos/5ff7cd5fa5a969b05d404d55/4:3/w_1280,h_960,c_limit/Angie_Forward-lunge.jpg'); /* Replace with your actual image */
+            background: linear-gradient(to bottom, #52ea33, #6c9bc2);
         }
 
         .intermediate-background::before {
-            background-image: url('https://cdn.muscleandstrength.com/sites/default/files/man-doing-front-squat-in-gym.jpg'); /* Replace with your actual image */
+            background: linear-gradient(to bottom, #2f7521, #6ca3c2);
         }
 
         .advanced-background::before {
-            background-image: url('https://www.dmoose.com/cdn/shop/articles/1_0f901017-662a-4c83-b006-a31cf2144913.jpg?v=1650138432'); /* Replace with your actual image */
+            background: linear-gradient(to bottom, #db1301, #6ca3c2);
+        }
+
+        a {
+            color: #ffffff; /* Change this to the color of your choice */
+            text-decoration: none; /* Remove underline if you don't want it */
+            position: relative;
+        }
+
+        /* Create the sliding underline effect */
+        a::after {
+            content: '';
+            display: block;
+            height: 2px; /* Adjust the thickness of the underline */
+            width: 0;
+            background-color: #ffffff; /* Match the link color */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s; /* Adjust the transition duration */
+        }
+
+        /* Expand the underline on hover */
+        a:hover::after {
+            width: 100%;
         }
     </style>
 </head>
@@ -104,47 +128,47 @@
             <div>
                 <ul class="exercise-list">
                     <li class="exercise-item">
-                        Push-ups
+                        <a href="https://youtu.be/FaIpD_zfrJI?feature=shared">Push Ups</a>
                         <div class="exercise-description">Place hands shoulder-width apart, keep your body straight, and lower your chest towards the ground.</div>
                     </li>
                     <li class="exercise-item">
-                        Bodyweight Squats
+                        <a href="https://youtu.be/m0GcZ24pK6k?feature=shared">Bodyweight Squats</a>
                         <div class="exercise-description">Stand with feet shoulder-width apart, lower your hips back and down, keeping your chest up.</div>
                     </li>
                     <li class="exercise-item">
-                        Plank
+                        <a href="https://youtu.be/Ym35c5pKRDo?feature=shared">Plank</a>
                         <div class="exercise-description">Hold a push-up position with arms straight, keeping your body in a straight line.</div>
                     </li>
                     <li class="exercise-item">
-                        Jumping Jacks
+                        <a href="https://youtu.be/iSSAk4XCsRA?feature=shared">Jumping Jacks</a>
                         <div class="exercise-description">Start with feet together and arms at your sides, then jump, spreading your legs and raising your arms overhead.</div>
                     </li>
                     <li class="exercise-item">
-                        Lunges
+                        <a href="https://youtu.be/VwEnBfluxlo?feature=shared">Lunges</a>
                         <div class="exercise-description">Step forward with one foot and lower your body until both knees are bent at a 90-degree angle.</div>
                     </li>
                     <li class="exercise-item">
-                        Plank to Downward Dog
+                        <a href="https://youtu.be/5FcS9IOWpSo?feature=shared">Plank to Downward Dog</a>
                         <div class="exercise-description">Start in a plank position and lift your hips towards the ceiling, forming an inverted V.</div>
                     </li>
                     <li class="exercise-item">
-                        Wall Sit
+                        <a href="https://youtu.be/-cdph8hv0O0?feature=shared">Wall Sit</a>
                         <div class="exercise-description">Sit against a wall with your thighs parallel to the ground, hold the position.</div>
                     </li>
                     <li class="exercise-item">
-                        Incline Push-ups
+                        <a href="https://youtu.be/E--Ls5QtFqI?feature=shared">Incline Push-ups</a>
                         <div class="exercise-description">Perform push-ups with your hands on an elevated surface, like a bench.</div>
                     </li>
                     <li class="exercise-item">
-                        Box Squats
+                        <a href="https://youtu.be/rMEPHwNhQfo?feature=shared">Box Squats</a>
                         <div class="exercise-description">Squat onto a box or bench, then stand back up.</div>
                     </li>
                     <li class="exercise-item">
-                        Bent-over Rows
+                        <a href="https://youtu.be/pyBHPoC8Nzo?feature=shared">Bent-over Rows</a>
                         <div class="exercise-description">Bend at the hips and knees, then row a weight towards your chest.</div>
                     </li>
                     <li class="exercise-item">
-                        Leg Raises
+                        <a href="https://youtu.be/l4kQd9eWclE?feature=shared">Leg Raises</a>
                         <div class="exercise-description">Lie on your back and lift your legs towards the ceiling, then lower them without touching the ground.</div>
                     </li>
                     <!-- Add more beginner exercises as needed -->
@@ -160,47 +184,47 @@
             <div>
                 <ul class="exercise-list">
                     <li class="exercise-item">
-                        Diamond Push-ups
+                        <a href="https://youtu.be/pD3mD6WgykM?feature=shared">Diamond Push-ups</a>
                         <div class="exercise-description">Perform push-ups with your hands close together, forming a diamond shape.</div>
                     </li>
                     <li class="exercise-item">
-                        Goblet Squats
+                        <a href="https://youtu.be/CkFzgR55gho?feature=shared">Goblet Squats</a>
                         <div class="exercise-description">Hold a dumbbell close to your chest and perform squats, keeping your back straight.</div>
                     </li>
                     <li class="exercise-item">
-                        Side Plank
+                        <a href="https://youtu.be/9dNL_mtObGQ?feature=shared">Side Plank</a>
                         <div class="exercise-description">Support your body on one arm, with your body forming a straight line, hold for time.</div>
                     </li>
                     <li class="exercise-item">
-                        Box Jumps
+                        <a href="https://youtu.be/NBY9-kTuHEk?feature=shared">Box Jumps</a>
                         <div class="exercise-description">Jump onto a sturdy box or platform, landing softly with your knees slightly bent.</div>
                     </li>
                     <li class="exercise-item">
-                        Russian Twists
+                        <a href="https://youtu.be/wkD8rjkodUI?feature=shared">Russian Twists</a>
                         <div class="exercise-description">Sit on the ground, lean back slightly, and twist your torso to touch the ground on each side.</div>
                     </li>
                     <li class="exercise-item">
-                        Mountain Climber Variations
+                        <a href="https://youtu.be/nmwgirgXLYM?feature=shared">Mountain Climber</a>
                         <div class="exercise-description">From a plank position, bring one knee towards your chest, alternating quickly.</div>
                     </li>
                     <li class="exercise-item">
-                        Pull-ups
+                        <a href="https://youtu.be/aAggnpPyR6E?feature=shared">Pull-ups</a>
                         <div class="exercise-description">Hang from a bar and pull your body upwards until your chin is above the bar.</div>
                     </li>
                     <li class="exercise-item">
-                        Dips
+                        <a href="https://youtu.be/2z8JmcrW-As?feature=shared">Dips</a>
                         <div class="exercise-description">Use parallel bars or sturdy furniture to lower and raise your body.</div>
                     </li>
                     <li class="exercise-item">
-                        Bulgarian Split Squats
+                        <a href="https://youtu.be/7Aqeb8UHl4k?feature=shared">Bulgarian Split Squats</a>
                         <div class="exercise-description">Stand a few feet in front of a bench, with one foot resting behind you on the bench, lower your body into a lunge.</div>
                     </li>
                     <li class="exercise-item">
-                        Plank with Knee to Elbow
+                        <a href="https://youtu.be/_lzjaBLTFhU?feature=shared">Plank with Knee to Elbow</a>
                         <div class="exercise-description">From a plank position, bring one knee towards the corresponding elbow, alternating sides.</div>
                     </li>
                     <li class="exercise-item">
-                        Lateral Raises
+                        <a href="https://youtu.be/3VcKaXpzqRo?feature=shared">Lateral Raises</a>
                         <div class="exercise-description">Hold weights at your sides and lift them out to the sides until your arms are parallel to the ground.</div>
                     </li>
                     <!-- Add more intermediate exercises as needed -->
@@ -216,48 +240,48 @@
             <div>
                 <ul class="exercise-list">
                     <li class="exercise-item">
-                        Handstand Push-ups
+                        <a href="https://youtu.be/oTy2ORF_NC4?feature=shared">Handstand Push-ups</a>
                         <div class="exercise-description">Perform push-ups with your body inverted in a handstand position against a wall or freestanding.</div>
                     </li>
                     <li class="exercise-item">
-                        Pistol Squats
+                        <a href="https://youtu.be/qDcniqddTeE?feature=shared">Pistol Squats</a>
                         <div class="exercise-description">Balance on one leg and lower your body into a single-leg squat, keeping the other leg extended.</div>
                     </li>
                     <li class="exercise-item">
-                        Planche Progressions
-                        <div class="exercise-description">Gradually progress towards a planche by leaning forward and lifting your feet off the ground.</div>
+                        <a href="https://youtu.be/YHkHgJOAe9A?feature=shared">Tuck Planche</a>
+                        <div class="exercise-description">Lean forward and lift your knees towards your chest, balancing on your hands.</div>
                     </li>
                     <li class="exercise-item">
-                        Clapping Push-ups
+                        <a href="https://youtu.be/k53ogCacHIQ?feature=shared">Clapping Push-ups</a>
                         <div class="exercise-description">Perform explosive push-ups, pushing your body off the ground and clapping your hands before landing.</div>
                     </li>
                     <li class="exercise-item">
-                        L-Sit Pull-ups
+                        <a href="https://youtu.be/wEahB-TjjaY?feature=shared">L-Sit Pull-ups</a>
                         <div class="exercise-description">Hang from a bar and lift your legs in an L-shape while performing pull-ups.</div>
                     </li>
                     <li class="exercise-item">
-                        Burpee Pull-ups
+                        <a href="https://youtu.be/jVzrLDIRqnE?feature=shared">Burpee Pull-ups</a>
                         <div class="exercise-description">Combine a burpee with a pull-up for a full-body explosive exercise.</div>
                     </li>
                     <li class="exercise-item">
-                        Muscle-ups
+                        <a href="https://youtu.be/_iYvlSMgUGE?feature=shared">Muscle-ups</a>
                         <div class="exercise-description">Perform a pull-up followed by a dip, transitioning between the two in a fluid motion.</div>
                     </li>
                     <li class="exercise-item">
-                        Front Lever Progressions
+                        <a href="https://youtu.be/AGhb8V8M758?feature=shared">Front Lever Progressions</a>
                         <div class="exercise-description">Develop strength to hold your body parallel to the ground while hanging from a bar.</div>
                     </li>
                     <li class="exercise-item">
-                        Dragon Flags
+                        <a href="https://youtu.be/pvz7k5gO-DE?feature=shared">Dragon Flags</a>
                         <div class="exercise-description">Lie on your back and lift your legs towards the ceiling, then lower them back down without touching the ground.</div>
                     </li>
                     <li class="exercise-item">
-                        One-Arm Push-ups
+                        <a href="https://youtu.be/xp1tgjT_3k0?feature=shared">One-Arm Push-ups</a>
                         <div class="exercise-description">Perform push-ups with one hand placed in the center of your chest and the other behind your back.</div>
                     </li>
                     <li class="exercise-item">
-                        Tuck Planche
-                        <div class="exercise-description">Lean forward and lift your knees towards your chest, balancing on your hands.</div>
+                        <a href="https://youtu.be/jiA3RnMxFU0?feature=shared">Archer Pushups</a>
+                        <div class="exercise-description">In a push-up position, bring the body down on the right side by bending the right elbow and straightening the left arm out to the left side and vice versa.</div>
                     </li>
                     <!-- Add more advanced exercises as needed -->
                 </ul>

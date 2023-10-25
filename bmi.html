@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
-            background: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/10d80963172037.5aa8241d03552.jpg') center center/cover fixed no-repeat; /* Add your background image path */
+            background-color: rgb(196, 177, 177);
             color: black;
             display: flex;
             align-items: center;
@@ -20,14 +20,17 @@
         }
 
         .bmi-container {
-            text-align: center;
-            padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: rgba(255, 255, 255, 0.1); /* Opacity */
-            backdrop-filter: blur(5px); /* Blur effect */
-            position: relative;
-        }
+         text-align: center;
+         padding: 20px;
+         border-radius: 5px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+         background-color: rgb(196, 177, 177); /* Solid color */
+         position: relative;
+         max-width: 400px; /* Set maximum width */
+         width: 80%; /* Set width as a percentage of the parent container */
+         margin: auto; /* Center the container horizontally */
+         } 
+
 
         h2 {
             margin-top: 0;
@@ -66,7 +69,7 @@
         .result-box {
             margin-top: 20px;
             padding: 10px;
-            border: 2px solid #4CAF50;
+            border: 2px solid #000000;
             border-radius: 5px;
         }
 
@@ -75,10 +78,14 @@
             top: 0;
             left: 0;
             width: 100%;
+            max-width:420px;
             background-color: #333;
             color: #fff;
             padding: 10px;
             font-size: 16px;
+            border:none;
+            border-top-left-radius:5px;
+            border-top-right-radius:5px;
         }
     </style>
 </head>
